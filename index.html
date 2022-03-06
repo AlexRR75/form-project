@@ -7,38 +7,57 @@
     <title>form project</title>
 </head>
 <body>
-    <h1 id="title">Encuesta de satisfacción del cliente de la empresa forex</h1>
-    <p id="description">Por favor registra tus datos. Los espacios marcados (*) son requeridos</p>
+    <h1 id="title">Encuesta de satisfacción del cliente</h1>
+    <p id="description">Por favor registra tus datos. Los espacios marcados con (*) son requeridos</p>
     <form id="survey-form">
-        <label id="name">Usuario*<input type="text" placeholder="nombres y apellidos" required> </label>
-        <br>
-        <label id="email">dirección de correo Electrónico <input type="email" placeholder="ejemplo@email.com" required></label>
-        <br>
+        <p><label id="name">Usuario *<input type="text" placeholder="nombres y apellidos" required> </label>
+        </p>
+        <p><label id="email">dirección de correo Electrónico * <input type="email" placeholder="ejemplo@email.com" required></label></p>
         
         <!--verificar email-->
-        <label id="number">Número telefónico<input type="number" placeholder="solo números" required></label>
+        <p><label id="telnumber">Número telefónico *  <input type="tel" placeholder="solo números" required></label></p>
         
         <!--validar que si sean numeros-->
-        <br>
+        <p></p>
         <input type="radio" name="genero" id="hombre">
         <label for="hombre">Hombre</label>
         <input type="radio" name="genero" id="mujer">
         <label for="mujer">mujer</label>
         <input type="radio" name="genero" id="indeterminado">
-        <label for="indeterminado">Prefiero no contestar</label>
-        <br>
-
-            
+        <label for="indeterminado">Prefiero no contestar</label><br>
+        <p></p> 
         <label for="país">País de residencia:</label>
             <select id="dropdown">
+                <option value="Escoger">Escoge tu país</option>
                 <option value="españa">España</option>
                 <option value="colombia">Colombia</option>
                 <option value="suiza">Suiza</option>
-            </select>
+            </select><br>
+        <p>¿Cuales productos compra en nuestra tienda?</p>
+            <div>
+                <label for="vestuario"> <input type="checkbox" id="checkbox" value="ropa">Vestuario</label>
+            </div>
+            <div>
+                <label for="calzado"><input type="checkbox" id="checkbox" value="calzado">Calzado</label>
+            </div>
+            <div>
+                <label for="juguetes"><input type="checkbox" id="checkbox" value="juguetes">Juguetes</label>
+            </div>
+            <div>
+                <label for="hogar"><input type="checkbox" id="checkbox" value="hogar">Ropa hogar</label>
+            </div>
 
 
+        <p><label for="edad">Edad</label>
+        <input type="number" name="edad" id="edad" placeholder="18-50" min="18" max="50"></p>
+        <!--<p>
+        <input type="text" pattern="\d*"/>
+        </p>-->
         <p>Comentarios o sugerencias?</p>
             <textarea cols="60" rows="10">Escriba aquí...</textarea>
+        <p></p>
+        <button type="submit">Enviar formulario</button>
+        <!--<button style="background-color: blue; color: antiquewhite;">Enviar Formulario</button>-->
         
 
 
